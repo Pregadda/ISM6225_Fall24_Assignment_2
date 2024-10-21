@@ -64,9 +64,9 @@ namespace Assignment_2
             {
                 // Write your code here
 
-                int n = nums.Length;
+                int arrayLength = nums.Length;
                 List<int> result = new List<int>();
-                for (int i = 0; i < n; i++)
+                for (int i = 0; i < arrayLength; i++)
                 {
                     int index = Math.Abs(nums[i]) - 1;
                     if (nums[index] > 0)
@@ -74,7 +74,7 @@ namespace Assignment_2
                         nums[index] = -nums[index];
                     }
                 }
-                for (int i = 0; i < n; i++)
+                for (int i = 0; i < arrayLength; i++)
                 {
                     if (nums[i] > 0)
                     {
@@ -145,8 +145,8 @@ namespace Assignment_2
             try
             {
                 Array.Sort(nums);
-                int n = nums.Length;
-                return Math.Max(nums[n - 1] * nums[n - 2] * nums[n - 3], nums[0] * nums[1] * nums[n - 1]);
+                int arrayLength = nums.Length;
+                return Math.Max(nums[arrayLength - 1] * nums[arrayLength - 2] * nums[arrayLength - 3], nums[0] * nums[1] * nums[arrayLength - 1]);
                 return 0; // Placeholder
             }
             catch (Exception)
